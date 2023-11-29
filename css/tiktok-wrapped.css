@@ -1,0 +1,153 @@
+.left-div {
+    display: none;
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.right-div {
+    display: none;
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.middle-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: xxx-large;
+    color: #ff0050;
+}
+
+h4 {
+    font-family: Roboto, sans-serif;
+    color: #ff0050;
+    font-size: xx-large;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #00f2ea;
+    font-family: Roboto, sans-serif;
+}
+
+.slideshow {
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    line-height: 1.2;
+    color: #00f2ea;
+    text-align: center;
+}
+
+
+.slideshow-x-larger-bolder {
+    font-size: 52px;
+    font-weight: bold;
+    color: #ff0050;
+}
+
+.slideshow-larger-bolder {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0050;
+}
+
+.slideshow-x-larger {
+    font-size: 52px;
+    color: #ff0050;
+}
+
+.slideshow-larger {
+    font-size: 48px;
+    color: #ff0050;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: rgba(0, 242, 234, 0.5);
+}
+
+.tiktok-data-table {
+    margin-top: 40px;
+    display: none;
+}
+
+.tiktok-data-table table {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+
+.tiktok-data-table th {
+    text-align: left;
+    font-size: larger;
+    padding: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    border: none;
+    color: #ff0050;
+}
+.tiktok-data-table td {
+    font-size: larger;
+    font-weight: 450;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid #ff0050;;
+}
+
+#shareButton {
+    background-color: #ff0050;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 4px 4px 2px 1px RGB(255, 0, 80, 0.5);
+    padding: 17px 40px 17px 40px;
+}
+
+#shareButton:hover {
+    transform: translateY(-2px);
+}
+
+#spotifyIframe {
+    border-radius:12px;
+    border: none;
+    position:fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* Animations */
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}

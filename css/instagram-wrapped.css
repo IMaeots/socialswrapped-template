@@ -1,0 +1,160 @@
+/*
+    Instagram Yellow: Hex: #fccc63 RGB: 252, 204, 99.
+    Instagram Orange: Hex: #fbad50 RGB: 251, 173, 80.
+    Instagram Maroon: Hex: #cd486b RGB: 205, 72, 107.
+    Instagram Blue: Hex: #4c68d7 RGB: 76, 104, 215.
+ */
+
+.left-div {
+    display: none;
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.right-div {
+    display: none;
+    flex: 0 0 10%;
+    text-align: center;
+}
+
+.middle-div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    font-family: Roboto, sans-serif;
+    font-size: xxx-large;
+    color: white;
+}
+
+h4 {
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-size: xx-large;
+}
+
+body {
+    background: linear-gradient(45deg, #4c68d7, #cd486b, #fbad50, #fccc63);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+.slideshow {
+    display: inline-block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    line-height: 1.2;
+    color: white;
+    text-align: center;
+}
+
+
+.slideshow-x-larger-bolder {
+    font-size: 52px;
+    font-weight: bold;
+    color: black;
+}
+
+.slideshow-larger-bolder {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+}
+
+.slideshow-x-larger {
+    font-size: 52px;
+    color: black;
+}
+
+.slideshow-larger {
+    font-size: 48px;
+    color: black;
+}
+
+.watermark {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: rgba(225, 255, 255, 0.7);
+}
+
+.tiktok-data-table {
+    margin-top: 40px;
+    display: none;
+}
+
+.tiktok-data-table table {
+    margin-top: 20px;
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+
+.tiktok-data-table th {
+    text-align: left;
+    font-size: larger;
+    padding: 18px;
+    text-decoration: underline;
+    font-weight: bold;
+    border: none;
+    color: black;
+}
+.tiktok-data-table td {
+    font-size: larger;
+    font-weight: 450;
+    padding: 10px;
+    text-align: left;
+    border: 2px solid black;;
+}
+
+#shareButton {
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 4px 4px 2px 1px RGB(0, 0, 160, 0.5);
+    padding: 17px 40px 17px 40px;
+}
+
+#shareButton:hover {
+    transform: translateY(-2px);
+}
+
+#spotifyIframe {
+    border-radius:12px;
+    border: none;
+    position:fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+/* Animations */
+
+/* Fade in and out animation */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
