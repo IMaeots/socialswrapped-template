@@ -76,6 +76,12 @@ body {
     color: black;
 }
 
+.slideshow-bolder {
+    font-size: 42px;
+    font-weight: bold;
+    color: black;
+}
+
 .watermark {
     position: fixed;
     bottom: 10px;
