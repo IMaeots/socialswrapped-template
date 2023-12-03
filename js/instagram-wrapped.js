@@ -7,16 +7,16 @@ const rightAd = document.querySelector(".right-div");
 function getPersonaImgPath() {
     let imagePath = myCharacters.imagePath;
     switch (persona) {
-        case "Adventurer": return imagePath + 'adventurer.jpg';
-        case "Calm Guru": return imagePath + 'calm_guru.jpg';
-        case "Interactive bunny": return imagePath + 'interactive_bunny.jpg';
-        case "Lifestyle admirer": return imagePath + 'lifestyle_admirer.jpg';
-        case "Lurker": return imagePath + 'lurker.jpg';
-        case "Nolifer": return imagePath + 'nolifer.jpg';
-        case "Superman": return imagePath + 'superman.jpg';
-        case "The Charmer": return imagePath + 'the_charmer.jpg';
-        case "The Enthusiast": return imagePath + 'the_enthusiast.jpg';
-        case "Trend Follower": return imagePath + 'trend_follower.jpg';
+        case "Adventurer": return imagePath + 'adventurer2.png';
+        case "Calm Guru": return imagePath + 'calm_guru2.png';
+        case "Interactive bunny": return imagePath + 'interactive_bunny2.png';
+        case "Lifestyle admirer": return imagePath + 'lifestyle_admirer2.png';
+        case "Lurker": return imagePath + 'lurker2.png';
+        case "Nolifer": return imagePath + 'nolifer2.png';
+        case "Superman": return imagePath + 'superman2.png';
+        case "The Charmer": return imagePath + 'the_charmer2.png';
+        case "The Enthusiast": return imagePath + 'the_enthusiast2.png';
+        case "Trend Follower": return imagePath + 'trend_follower2.png';
     }
 }
 
@@ -84,7 +84,12 @@ document.getElementById("shareButton").addEventListener("click", function () {
         const context = canvas.getContext("2d");
 
         // Apply background for canvas.
-        context.fillStyle = 'black';
+        const gradient = context.createLinearGradient(0, 0, canvas.width, canvas.height);
+        gradient.addColorStop(0, '#4c68d7');
+        gradient.addColorStop(0.33, '#cd486b');
+        gradient.addColorStop(0.66, '#fbad50');
+        gradient.addColorStop(1, '#fccc63');
+        context.fillStyle = gradient;
         context.fillRect(0, 0, canvas.width, canvas.height);
 
         // Get the correct Image.
@@ -95,41 +100,41 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.drawImage(img, 220, 80, 640, 640)
 
             // Title.
-            context.fillStyle = "#1DA1F2";
+            context.fillStyle = "white";
             context.font = "bold 64px Roboto";
             context.textAlign = "center";
-            context.fillText(persona, canvas.width / 2, 800);
+            context.fillText(persona, canvas.width / 2, 750);
             context.font = "52px Roboto";
-            context.fillText(persona_description, canvas.width / 2, 875);
+            context.fillText(persona_description, canvas.width / 2, 825);
 
             // List heading.
-            context.fillStyle = "white";
+            context.fillStyle = "#000000";
             context.font = "bold 48px Roboto";
             context.textAlign = "center";
-            context.fillText(`${name}\'s Instagram activity:`, canvas.width / 2, 1000);
+            context.fillText(`${name}\'s Instagram activity:`, canvas.width / 2, 950);
 
             // Underline for "STATS".
-            context.strokeStyle = "white";
+            context.strokeStyle = "#000000";
             context.lineWidth = 2;
             context.beginPath();
-            context.moveTo(canvas.width / 2 - 270, 1025); // Start point
-            context.lineTo(canvas.width / 2 + 270, 1025); // End point
+            context.moveTo(canvas.width / 2 - 270, 975); // Start point
+            context.lineTo(canvas.width / 2 + 270, 975); // End point
             context.stroke();
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`Total videos watched: ${num_videos_watched}`, canvas.width / 2, 1100);
-            context.fillText(`Total watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1175);
-            context.fillText(`Total number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1250);
-            context.fillText(`Average session length: ${avg_session_length} min`, canvas.width / 2, 1325);
-            context.fillText(`Longest watch session: ${longest_watch_time} min`, canvas.width / 2, 1400);
-            context.fillText(`Most active weekday: ${tiktok_day}`, canvas.width / 2, 1475);
-            context.fillText(`Total likes: ${num_of_likes}`, canvas.width / 2, 1550);
-            context.fillText(`Total comments: ${num_of_comments}`, canvas.width / 2, 1625);
-            context.fillText(`Total shares: ${num_of_shares}`, canvas.width / 2, 1700);
+            context.fillText(`Total videos watched: ${num_videos_watched}`, canvas.width / 2, 1050);
+            context.fillText(`Total watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1125);
+            context.fillText(`Total number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1200);
+            context.fillText(`Average session length: ${avg_session_length} min`, canvas.width / 2, 1275);
+            context.fillText(`Longest watch session: ${longest_watch_time} min`, canvas.width / 2, 1350);
+            context.fillText(`Most active weekday: ${tiktok_day}`, canvas.width / 2, 1425);
+            context.fillText(`Total likes: ${num_of_likes}`, canvas.width / 2, 1500);
+            context.fillText(`Total comments: ${num_of_comments}`, canvas.width / 2, 1575);
+            context.fillText(`Total shares: ${num_of_shares}`, canvas.width / 2, 1650);
 
             // Footer
-            context.fillStyle = "black";
+            context.fillStyle = "#000000";
             context.font = "bold 42px Roboto";
             context.textAlign = "center";
             context.fillText("Socialswrapped.com", canvas.width / 2, 1820);
@@ -144,7 +149,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             // Create a download link.
             const downloadLink = document.createElement("a");
             downloadLink.href = dataURL;
-            downloadLink.download = "x_wrapped.png";
+            downloadLink.download = "instagram_wrapped.png";
 
             // Hide the download link.
             downloadLink.style.display = "none";

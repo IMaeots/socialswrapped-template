@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: instagram-wrapped-template
+Template Name: Instagram Wrapped
 */
 ?>
 <?php
@@ -172,7 +172,7 @@ if ($dictData['demo'] === 1) {
 </div>
 <div class="right-div"></div>
 <iframe id="spotifyIframe"
-        src="https://open.spotify.com/embed/playlist/65LdqYCLcsV0lJoxpeQ6fW?utm_source=generator"
+        src="https://open.spotify.com/embed/playlist/6QE0dKR03JAFYsa9zXz7Zf?utm_source=generator"
         width="300" height="80" allowfullscreen="" loading="lazy"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
 </body>

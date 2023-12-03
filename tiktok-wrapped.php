@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: tiktok-wrapped-template
+Template Name: TikTok Wrapped
 */
 ?>
 <?php
