@@ -123,15 +123,14 @@ document.getElementById("shareButton").addEventListener("click", function () {
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`Total videos watched: ${num_videos_watched}`, canvas.width / 2, 1050);
-            context.fillText(`Total watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1125);
-            context.fillText(`Total number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1200);
-            context.fillText(`Average session length: ${avg_session_length} min`, canvas.width / 2, 1275);
-            context.fillText(`Longest watch session: ${longest_watch_time} min`, canvas.width / 2, 1350);
-            context.fillText(`Most active weekday: ${tiktok_day}`, canvas.width / 2, 1425);
-            context.fillText(`Total likes: ${num_of_likes}`, canvas.width / 2, 1500);
-            context.fillText(`Total comments: ${num_of_comments}`, canvas.width / 2, 1575);
-            context.fillText(`Total shares: ${num_of_shares}`, canvas.width / 2, 1650);
+            context.fillText(`All-time comments on posts: ${post_comments_alltime}`, canvas.width / 2, 1050);
+            context.fillText(`All-time comments on reels: ${reels_comments_alltime}`, canvas.width / 2, 1125);
+            context.fillText(`First ever story date: ${first_ever_story_timestamp}`, canvas.width / 2, 1200);
+            context.fillText(`Stories liked this year: ${story_interactions_likes_current}`, canvas.width / 2, 1275);
+            context.fillText(`Posts liked this year: ${post_likes_current}`, canvas.width / 2, 1350);
+            context.fillText(`Comments liked this year: ${comment_likes_current}`, canvas.width / 2, 1425);
+            context.fillText(`Posts saved this year: ${saved_posts_thisyear}`, canvas.width / 2, 1500);
+            context.fillText(`Instagram tricked you: ${suggested_accounts_viewed_alltime} times`, canvas.width / 2, 1575);
 
             // Footer
             context.fillStyle = "#000000";

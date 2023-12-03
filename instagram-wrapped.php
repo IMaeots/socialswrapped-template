@@ -45,57 +45,45 @@ if ($dictData['demo'] === 1) {
         <h3 style="text-align: left"><u>And that is not all! - You did even more...</u></h3>
         <table>
             <tr>
-                <th>Activity History Range</th>
+                <th>Last and First...</th>
             </tr>
             <tr>
-                <td>Earliest video watched in data</td>
-                <td><?php echo $dictData['start_date'] ?></td>
+                <td>Last login date</td>
+                <td><?php echo $dictData['last_login_timestamp'] ?></td>
             </tr>
             <tr>
-                <td>Last video watched in data</td>
-                <td><?php echo $dictData['last_vid_in_data'] ?></td>
+                <td>Last logout date</td>
+                <td><?php echo $dictData['last_logout_timestamp'] ?></td>
             </tr>
             <tr>
-                <th>Watch Sessions</th>
+                <td>Your first ever story date</td>
+                <td><?php echo $dictData['first_ever_story_timestamp'] ?></td>
             </tr>
             <tr>
-                <td>Total videos watched</td>
-                <td><?php echo $dictData['num_videos_watched'] ?></td>
+                <th>Story interactions this year!</th>
             </tr>
             <tr>
-                <td>Total watch time</td>
-                <td><?php echo "{$dictData['total_watch_time']} min ({$dictData['total_watch_days']} days)" ?></td>
+                <td>Number of Quizzes interacted with</td>
+                <td><?php echo $dictData['story_interactions_quizzes_current'] ?></td>
             </tr>
             <tr>
-                <td>Watch sessions</td>
-                <td><?php echo $dictData['num_watch_sessions'] ?></td>
+                <td>Number of Polls interacted with</td>
+                <td><?php echo $dictData['story_interactions_polls_current'] ?></td>
             </tr>
             <tr>
-                <td>Longest watch session</td>
-                <td><?php echo "{$dictData['longest_watch_date']} ({$dictData['longest_watch_time']} min)" ?></td>
+                <td>Number of likes on Stories</td>
+                <td><?php echo $dictData['story_interactions_likes_current'] ?></td>
             </tr>
             <tr>
-                <td>Average session length</td>
-                <td><?php echo "{$dictData['avg_session_length']} min"?></td>
+                <th>Comments:</th>
             </tr>
             <tr>
-                <td>Average time spent on each video</td>
-                <td><?php echo "{$dictData['avg_video_length']} seconds" ?></td>
+                <td>Total comments on posts all time</td>
+                <td><?php echo $dictData['post_comments_alltime'] ?></td>
             </tr>
             <tr>
-                <td>Most active weekday</td>
-                <td><?php echo $dictData['tiktok_day'] ?></td>
-            </tr>
-            <tr>
-                <th>Comments</th>
-            </tr>
-            <tr>
-                <td>Total comments</td>
-                <td><?php echo $dictData['num_of_comments'] ?></td>
-            </tr>
-            <tr>
-                <td>Average comment length</td>
-                <td><?php echo $dictData['avg_comment_length'] ?></td>
+                <td>Total comments on reels all time</td>
+                <td><?php echo $dictData['reels_comments_alltime'] ?></td>
             </tr>
             <tr>
                 <td>Most used emoji</td>
@@ -105,31 +93,34 @@ if ($dictData['demo'] === 1) {
                 <th>Likes</th>
             </tr>
             <tr>
-                <td>Total likes</td>
-                <td><?php echo $dictData['num_of_likes'] ?></td>
+                <td>Post likes this year</td>
+                <td><?php echo $dictData['post_likes_current'] ?></td>
             </tr>
             <tr>
-                <td>Day with most liked posts</td>
-                <td><?php echo "{$dictData['record_of_likes_date']} (x{$dictData['record_of_likes']})" ?></td>
+                <td>Comment likes this year</td>
+                <td><?php echo "{$dictData['comment_likes_current']} (x{$dictData['record_of_likes']})" ?></td>
             </tr>
             <tr>
-                <th>Shares</th>
+                <th>About you:</th>
             </tr>
             <tr>
-                <td>Total shares</td>
-                <td><?php echo $dictData['num_of_shares'] ?></td>
+                <td>Number of posts this year</td>
+                <td><?php echo $dictData['posts_thisyear'] ?></td>
             </tr>
             <tr>
-                <td>Day with most shared posts</td>
-                <td><?php echo "{$dictData['most_shares_day']} (x{$dictData['most_shares_amount']})" ?></td>
+                <td>Number of stories this year</td>
+                <td><?php echo $dictData['stories_thisyear'] ?></td>
             </tr>
             <tr>
-            <tr>
-                <th>Lives</th>
+                <td>Number of account you viewed because Instagram pushed them...</td>
+                <td><?php echo $dictData['suggested_accounts_viewed_alltime'] ?></td>
             </tr>
             <tr>
-                <td>Total lives viewed</td>
-                <td><?php echo $dictData['total_lives_viewed'] ?></td>
+                <th>Saves</th>
+            </tr>
+            <tr>
+                <td>Number of saved posts this year</td>
+                <td><?php echo $dictData['saved_posts_thisyear'] ?></td>
             </tr>
             <tr>
                 <th>Persona</th>
@@ -150,15 +141,14 @@ if ($dictData['demo'] === 1) {
                 <script>
                     // Give necessary variables to canvas.
                     let name = <?php echo json_encode($dictData['name']) ?>;
-                    let num_videos_watched = <?php echo json_encode($dictData['num_videos_watched']) ?>;
-                    let total_watch_time = <?php echo json_encode($dictData['total_watch_time']) ?>;
-                    let num_watch_sessions = <?php echo json_encode($dictData['num_watch_sessions']) ?>;
-                    let avg_session_length = <?php echo json_encode($dictData['avg_session_length']) ?>;
-                    let longest_watch_time = <?php echo json_encode($dictData['longest_watch_time']) ?>;
-                    let num_of_likes = <?php echo json_encode($dictData['num_of_likes']) ?>;
-                    let num_of_comments = <?php echo json_encode($dictData['num_of_comments']) ?>;
-                    let num_of_shares = <?php echo json_encode($dictData['num_of_shares']) ?>;
-                    let tiktok_day = <?php echo json_encode($dictData['tiktok_day']) ?>;
+                    let post_comments_alltime = <?php echo json_encode($dictData['post_comments_alltime']) ?>;
+                    let reels_comments_alltime = <?php echo json_encode($dictData['reels_comments_alltime']) ?>;
+                    let first_ever_story_timestamp = <?php echo json_encode($dictData['first_ever_story_timestamp']) ?>;
+                    let story_interactions_likes_current = <?php echo json_encode($dictData['story_interactions_likes_current']) ?>;
+                    let post_likes_current = <?php echo json_encode($dictData['post_likes_current']) ?>;
+                    let comment_likes_current = <?php echo json_encode($dictData['comment_likes_current']) ?>;
+                    let saved_posts_thisyear = <?php echo json_encode($dictData['saved_posts_thisyear']) ?>;
+                    let suggested_accounts_viewed_alltime = <?php echo json_encode($dictData['suggested_accounts_viewed_alltime']) ?>;
                 </script>
             </canvas>
             <br>
