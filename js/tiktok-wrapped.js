@@ -35,15 +35,14 @@ function startSlideshow() {
     let index = 1;
     const slideshow = setInterval(updateSlideshow, 5000);
     function updateSlideshow() {
-        // Prepare image
-        const image = document.createElement('img');
-                image.src = getPersonaImgPath(persona)
-                image.style.width = '250px';
-                image.style.height = '250px';
         if (index < slideshowTextArray.length) {
             if ((index + 1) === slideshowTextArray.length) {
                 slideshowElement.style.opacity = '0';
                 // Add image for last slide.
+                const image = document.createElement('img');
+                image.src = getPersonaImgPath(persona)
+                image.style.width = '250px';
+                image.style.height = '250px';
                 slideshowElement.innerHTML = '';
                 slideshowElement.appendChild(image);
                 slideshowElement.innerHTML += `<br>${slideshowTextArray[index]}`;

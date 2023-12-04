@@ -8,7 +8,7 @@ function getPersonaImgPath() {
     let imagePath = myCharacters.imagePath;
     switch (persona) {
         case "Adventurer": return imagePath + 'adventurer2.png';
-        case "Calm Guru": return imagePath + 'calm_guru2.png';
+        case "Chiller": return imagePath + 'calm_guru2.png';
         case "Interactive bunny": return imagePath + 'interactive_bunny2.png';
         case "Lifestyle admirer": return imagePath + 'lifestyle_admirer2.png';
         case "Lurker": return imagePath + 'lurker2.png';
@@ -35,15 +35,14 @@ function startSlideshow() {
     let index = 1;
     const slideshow = setInterval(updateSlideshow, 5000);
     function updateSlideshow() {
-        // Prepare image
-        const image = document.createElement('img');
-        image.src = getPersonaImgPath(persona)
-        image.style.width = '250px';
-        image.style.height = '250px';
         if (index < slideshowTextArray.length) {
             if ((index + 1) === slideshowTextArray.length) {
                 slideshowElement.style.opacity = '0';
                 // Add image for last slide.
+                const image = document.createElement('img');
+                image.src = getPersonaImgPath(persona)
+                image.style.width = '250px';
+                image.style.height = '250px';
                 slideshowElement.innerHTML = '';
                 slideshowElement.appendChild(image);
                 slideshowElement.innerHTML += `<br>${slideshowTextArray[index]}`;
@@ -97,7 +96,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
         img.src = getPersonaImgPath();
 
         img.onload = function () {
-            context.drawImage(img, 220, 80, 640, 640)
+            context.drawImage(img, 220, 80, 640, 640);
 
             // Title.
             context.fillStyle = "white";
@@ -108,13 +107,13 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.fillText(persona_description, canvas.width / 2, 825);
 
             // List heading.
-            context.fillStyle = "#000000";
+            context.fillStyle = "black";
             context.font = "bold 48px Roboto";
             context.textAlign = "center";
             context.fillText(`${name}\'s Instagram activity:`, canvas.width / 2, 950);
 
             // Underline for "STATS".
-            context.strokeStyle = "#000000";
+            context.strokeStyle = "black";
             context.lineWidth = 2;
             context.beginPath();
             context.moveTo(canvas.width / 2 - 270, 975); // Start point
@@ -131,6 +130,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.fillText(`Comments liked this year: ${comment_likes_current}`, canvas.width / 2, 1425);
             context.fillText(`Posts saved this year: ${saved_posts_thisyear}`, canvas.width / 2, 1500);
             context.fillText(`Instagram tricked you: ${suggested_accounts_viewed_alltime} times`, canvas.width / 2, 1575);
+            context.fillText(`------------------------------`, canvas.width / 2, 1650);
 
             // Footer
             context.fillStyle = "#000000";

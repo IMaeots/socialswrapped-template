@@ -42,7 +42,7 @@ if ($dictData['demo'] === 1) {
 <!-- Table of wrapped social media data -->
 <div class="middle-div">
     <div class="tiktok-data-table">
-        <h3 style="text-align: left"><u>And that is not all! - You did even more...</u></h3>
+        <h4><u>And that is not all! - You did even more...</u></h4>
         <table>
             <tr>
                 <th>Last and First...</th>
@@ -86,18 +86,14 @@ if ($dictData['demo'] === 1) {
                 <td><?php echo $dictData['reels_comments_alltime'] ?></td>
             </tr>
             <tr>
-                <td>Most used emoji</td>
-                <td><?php echo "{$dictData['favourite_emoji']} (x{$dictData['favourite_emoji_amount']})" ?></td>
-            </tr>
-            <tr>
                 <th>Likes</th>
             </tr>
             <tr>
-                <td>Post likes this year</td>
+                <td>Posts liked this year</td>
                 <td><?php echo $dictData['post_likes_current'] ?></td>
             </tr>
             <tr>
-                <td>Comment likes this year</td>
+                <td>Comments liked this year</td>
                 <td><?php echo "{$dictData['comment_likes_current']} (x{$dictData['record_of_likes']})" ?></td>
             </tr>
             <tr>
@@ -112,14 +108,14 @@ if ($dictData['demo'] === 1) {
                 <td><?php echo $dictData['stories_thisyear'] ?></td>
             </tr>
             <tr>
-                <td>Number of account you viewed because Instagram pushed them...</td>
+                <td>Number of accounts you viewed because Instagram pushed them...</td>
                 <td><?php echo $dictData['suggested_accounts_viewed_alltime'] ?></td>
             </tr>
             <tr>
                 <th>Saves</th>
             </tr>
             <tr>
-                <td>Number of saved posts this year</td>
+                <td>Number of posts saved this year</td>
                 <td><?php echo $dictData['saved_posts_thisyear'] ?></td>
             </tr>
             <tr>
