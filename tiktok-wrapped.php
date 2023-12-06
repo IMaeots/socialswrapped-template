@@ -41,7 +41,7 @@ if ($dictData['demo'] === 1) {
 <div class="left-div"></div>
 <!-- Table of wrapped social media data -->
 <div class="middle-div">
-    <div class="tiktok-data-table">
+    <div class="data-table">
     <h3 style="text-align: left"><u>And that is not all! - You did even more...</u></h3>
     <table>
         <tr>

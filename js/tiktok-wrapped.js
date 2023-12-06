@@ -1,6 +1,6 @@
 // Constant variables
 const slideshowElement = document.querySelector(".slideshow");
-const tableContainer = document.querySelector(".tiktok-data-table");
+const tableContainer = document.querySelector(".data-table");
 const leftAd = document.querySelector(".left-div");
 const rightAd = document.querySelector(".right-div");
 // Get the path to correct persona picture.

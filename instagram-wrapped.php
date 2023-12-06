@@ -13,6 +13,7 @@ if (isset($_SESSION['data'])) {
 } else {
     session_destroy();
     wp_redirect(home_url());
+    exit;
 }
 
 session_destroy();
@@ -41,7 +42,7 @@ if ($dictData['demo'] === 1) {
 <div class="left-div"></div>
 <!-- Table of wrapped social media data -->
 <div class="middle-div">
-    <div class="tiktok-data-table">
+    <div class="data-table">
         <h4><u>And that is not all! - You did even more...</u></h4>
         <table>
             <tr>
@@ -94,7 +95,7 @@ if ($dictData['demo'] === 1) {
             </tr>
             <tr>
                 <td>Comments liked this year</td>
-                <td><?php echo "{$dictData['comment_likes_current']} (x{$dictData['record_of_likes']})" ?></td>
+                <td><?php echo $dictData['comment_likes_current'] ?></td>
             </tr>
             <tr>
                 <th>About you:</th>

@@ -1,22 +1,22 @@
 // Constant variables
 const slideshowElement = document.querySelector(".slideshow");
-const tableContainer = document.querySelector(".tiktok-data-table");
+const tableContainer = document.querySelector(".data-table");
 const leftAd = document.querySelector(".left-div");
 const rightAd = document.querySelector(".right-div");
 // Get the path to correct persona picture.
 function getPersonaImgPath() {
     let imagePath = myCharacters.imagePath;
     switch (persona) {
-        case "Adventurer": return imagePath + 'adventurer.jpg';
-        case "Calm Guru": return imagePath + 'calm_guru.jpg';
-        case "Interactive bunny": return imagePath + 'interactive_bunny.jpg';
-        case "Lifestyle admirer": return imagePath + 'lifestyle_admirer.jpg';
-        case "Lurker": return imagePath + 'lurker.jpg';
-        case "Nolifer": return imagePath + 'nolifer.jpg';
-        case "Superman": return imagePath + 'superman.jpg';
-        case "The Charmer": return imagePath + 'the_charmer.jpg';
-        case "The Enthusiast": return imagePath + 'the_enthusiast.jpg';
-        case "Trend Follower": return imagePath + 'trend_follower.jpg';
+        case "Adventurer": return imagePath + 'adventurer2.png';
+        case "Chiller": return imagePath + 'calm_guru2.png';
+        case "Interactive bunny": return imagePath + 'interactive_bunny2.png';
+        case "Lifestyle admirer": return imagePath + 'lifestyle_admirer2.png';
+        case "Lurker": return imagePath + 'lurker2.png';
+        case "Nolifer": return imagePath + 'nolifer2.png';
+        case "Superman": return imagePath + 'superman2.png';
+        case "The Charmer": return imagePath + 'the_charmer2.png';
+        case "The Enthusiast": return imagePath + 'the_enthusiast2.png';
+        case "Trend Follower": return imagePath + 'trend_follower2.png';
     }
 }
 
@@ -84,7 +84,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
         const context = canvas.getContext("2d");
 
         // Apply background for canvas.
-        context.fillStyle = 'black';
+        context.fillStyle = '#1DA1F2';
         context.fillRect(0, 0, canvas.width, canvas.height);
 
         // Get the correct Image.
@@ -95,7 +95,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.drawImage(img, 220, 80, 640, 640)
 
             // Title.
-            context.fillStyle = "#1DA1F2";
+            context.fillStyle = "#000000";
             context.font = "bold 64px Roboto";
             context.textAlign = "center";
             context.fillText(persona, canvas.width / 2, 800);
@@ -118,15 +118,15 @@ document.getElementById("shareButton").addEventListener("click", function () {
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`Total videos watched: ${num_videos_watched}`, canvas.width / 2, 1100);
-            context.fillText(`Total watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1175);
-            context.fillText(`Total number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1250);
-            context.fillText(`Average session length: ${avg_session_length} min`, canvas.width / 2, 1325);
-            context.fillText(`Longest watch session: ${longest_watch_time} min`, canvas.width / 2, 1400);
-            context.fillText(`Most active weekday: ${tiktok_day}`, canvas.width / 2, 1475);
-            context.fillText(`Total likes: ${num_of_likes}`, canvas.width / 2, 1550);
-            context.fillText(`Total comments: ${num_of_comments}`, canvas.width / 2, 1625);
-            context.fillText(`Total shares: ${num_of_shares}`, canvas.width / 2, 1700);
+            context.fillText(`Total videos watched: TODO`, canvas.width / 2, 1100);
+            context.fillText(`Total watch time: TODO hours`, canvas.width / 2, 1175);
+            context.fillText(`Total number of watch sessions: TODO`, canvas.width / 2, 1250);
+            context.fillText(`Average session length: TODO min`, canvas.width / 2, 1325);
+            context.fillText(`Longest watch session: TODO min`, canvas.width / 2, 1400);
+            context.fillText(`Most active weekday: TODO`, canvas.width / 2, 1475);
+            context.fillText(`Total likes: TODO`, canvas.width / 2, 1550);
+            context.fillText(`Total comments: TODO`, canvas.width / 2, 1625);
+            context.fillText(`Total shares: TODO`, canvas.width / 2, 1700);
 
             // Footer
             context.fillStyle = "black";

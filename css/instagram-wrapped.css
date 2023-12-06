@@ -93,13 +93,14 @@ body {
     color: rgba(225, 255, 255, 0.7);
 }
 
-.tiktok-data-table {
+.data-table {
     margin-top: 40px;
     display: none;
 }
 
-.tiktok-data-table table {
+.data-table table {
     margin-top: 20px;
+    min-width: 50%;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -108,7 +109,7 @@ body {
 }
 
 
-.tiktok-data-table th {
+.data-table th {
     text-align: left;
     font-size: larger;
     padding: 18px;
@@ -117,7 +118,7 @@ body {
     border: none;
     color: black;
 }
-.tiktok-data-table td {
+.data-table td {
     font-size: larger;
     font-weight: 450;
     padding: 10px;
