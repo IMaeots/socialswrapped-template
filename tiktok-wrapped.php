@@ -15,8 +15,6 @@ if (isset($_SESSION['data'])) {
     wp_redirect(home_url());
 }
 
-session_destroy();
-
 // Check if running on demo mode -> display the watermark & make fake data.
 if ($dictData['demo'] === 1) {
     echo '<div class="watermark">This is a demo! To see your data wrapped -><br>Go back to socialswrapped.com main page! :)</div>';
@@ -42,7 +40,7 @@ if ($dictData['demo'] === 1) {
 <!-- Table of wrapped social media data -->
 <div class="middle-div">
     <div class="data-table">
-    <h3 style="text-align: left"><u>And that is not all! - You did even more...</u></h3>
+    <h3 style="text-align: center"><u>And that is not all! - You did even more...</u></h3>
     <table>
         <tr>
             <th>Activity History Range</th>

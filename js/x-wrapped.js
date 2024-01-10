@@ -106,7 +106,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.fillStyle = "white";
             context.font = "bold 48px Roboto";
             context.textAlign = "center";
-            context.fillText(`${name}\'s X/Twitter activity:`, canvas.width / 2, 1000);
+            context.fillText(`${name}\'s X/Twitter Wrapped:`, canvas.width / 2, 1000);
 
             // Underline for "STATS".
             context.strokeStyle = "white";
@@ -118,15 +118,15 @@ document.getElementById("shareButton").addEventListener("click", function () {
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`Total videos watched: TODO`, canvas.width / 2, 1100);
-            context.fillText(`Total watch time: TODO hours`, canvas.width / 2, 1175);
-            context.fillText(`Total number of watch sessions: TODO`, canvas.width / 2, 1250);
-            context.fillText(`Average session length: TODO min`, canvas.width / 2, 1325);
-            context.fillText(`Longest watch session: TODO min`, canvas.width / 2, 1400);
-            context.fillText(`Most active weekday: TODO`, canvas.width / 2, 1475);
-            context.fillText(`Total likes: TODO`, canvas.width / 2, 1550);
-            context.fillText(`Total comments: TODO`, canvas.width / 2, 1625);
-            context.fillText(`Total shares: TODO`, canvas.width / 2, 1700);
+            context.fillText(`Searches made: ${search_count}`, canvas.width / 2, 1100);
+            context.fillText(`Tweets liked: ${tweets_liked}`, canvas.width / 2, 1175);
+            context.fillText(`Tweets posted: ${tweets_posted}`, canvas.width / 2, 1250);
+            context.fillText(`Community tweets: ${community_tweets_posted}`, canvas.width / 2, 1325);
+            context.fillText(`Total DM count: ${direct_messages_count + direct_group_messages_count}`, canvas.width / 2, 1400);
+            context.fillText(`List membership count: ${lists_member_count}`, canvas.width / 2, 1475);
+            context.fillText(`Broadcasts watched: ${broadcast_count}`, canvas.width / 2, 1550);
+            context.fillText(`Broadcast comment tally: ${broadcast_comments_count}`, canvas.width / 2, 1625);
+            context.fillText(`Ad Engagements: ${ad_engagements_count}`, canvas.width / 2, 1700);
 
             // Footer
             context.fillStyle = "black";

@@ -21,6 +21,8 @@ session_destroy();
 // Check if running on demo mode -> display the watermark & make fake data.
 if ($dictData['demo'] === 1) {
     echo '<div class="watermark">This is a demo! To see your data wrapped -><br>Go back to socialswrapped.com main page! :)</div>';
+} else {
+    echo '<div class="watermark"></div>';
 }
 ?>
 <!DOCTYPE html>
@@ -46,59 +48,25 @@ if ($dictData['demo'] === 1) {
         <h4><u>And that is not all! - You did even more...</u></h4>
         <table>
             <tr>
-                <th>Last and First...</th>
-            </tr>
-            <tr>
-                <td>Last login date</td>
-                <td><?php echo $dictData['last_login_timestamp'] ?></td>
-            </tr>
-            <tr>
-                <td>Last logout date</td>
-                <td><?php echo $dictData['last_logout_timestamp'] ?></td>
-            </tr>
-            <tr>
-                <td>Your first ever story date</td>
-                <td><?php echo $dictData['first_ever_story_timestamp'] ?></td>
-            </tr>
-            <tr>
-                <th>Story interactions this year!</th>
-            </tr>
-            <tr>
-                <td>Number of Quizzes interacted with</td>
-                <td><?php echo $dictData['story_interactions_quizzes_current'] ?></td>
-            </tr>
-            <tr>
-                <td>Number of Polls interacted with</td>
-                <td><?php echo $dictData['story_interactions_polls_current'] ?></td>
-            </tr>
-            <tr>
-                <td>Number of likes on Stories</td>
-                <td><?php echo $dictData['story_interactions_likes_current'] ?></td>
-            </tr>
-            <tr>
-                <th>Comments:</th>
-            </tr>
-            <tr>
-                <td>Total comments on posts all time</td>
-                <td><?php echo $dictData['post_comments_alltime'] ?></td>
-            </tr>
-            <tr>
-                <td>Total comments on reels all time</td>
-                <td><?php echo $dictData['reels_comments_alltime'] ?></td>
+                <th style="text-align: center">Through the past year</th>
             </tr>
             <tr>
                 <th>Likes</th>
             </tr>
             <tr>
-                <td>Posts liked this year</td>
-                <td><?php echo $dictData['post_likes_current'] ?></td>
+                <td>Posts liked</td>
+                <td><?php echo $dictData['post_likes_thisyear'] ?></td>
             </tr>
             <tr>
-                <td>Comments liked this year</td>
-                <td><?php echo $dictData['comment_likes_current'] ?></td>
+                <td>Comments liked</td>
+                <td><?php echo $dictData['comment_likes_thisyear'] ?></td>
             </tr>
             <tr>
-                <th>About you:</th>
+                <td>Stories liked</td>
+                <td><?php echo $dictData['story_interactions_likes_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <th>Activity</th>
             </tr>
             <tr>
                 <td>Number of posts this year</td>
@@ -109,15 +77,81 @@ if ($dictData['demo'] === 1) {
                 <td><?php echo $dictData['stories_thisyear'] ?></td>
             </tr>
             <tr>
-                <td>Number of accounts you viewed because Instagram pushed them...</td>
-                <td><?php echo $dictData['suggested_accounts_viewed_alltime'] ?></td>
-            </tr>
-            <tr>
                 <th>Saves</th>
             </tr>
             <tr>
-                <td>Number of posts saved this year</td>
+                <td>Number of posts saved</td>
                 <td><?php echo $dictData['saved_posts_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <th>Story interactions</th>
+            </tr>
+            <tr>
+                <td>Quizzes guessed</td>
+                <td><?php echo $dictData['story_interactions_quizzes_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <td>Polls voted on</td>
+                <td><?php echo $dictData['story_interactions_polls_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <th>Follow Activity</th>
+            </tr>
+            <tr>
+                <td>Follows given</td>
+                <td><?php echo $dictData['following_total_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <td>Follows gotten</td>
+                <td><?php echo $dictData['follows_total_thisyear'] ?></td>
+            </tr>
+            <tr>
+                <th style="text-align: center">Through your entire account history</th>
+            </tr>
+            <tr>
+                <th>Comments:</th>
+            </tr>
+            <tr>
+                <td>Number of comments on posts</td>
+                <td><?php echo $dictData['post_comments_alltime'] ?></td>
+            </tr>
+            <tr>
+                <td>Number of comments on reels</td>
+                <td><?php echo $dictData['reels_comments_alltime'] ?></td>
+            </tr>
+            <tr>
+                <th>Firsts and Lasts...</th>
+            </tr>
+            <tr>
+                <td>Account creation date</td>
+                <td><?php echo $dictData['signup_date'] ?></td>
+            </tr>
+            <tr>
+                <td>Your first ever story date</td>
+                <td><?php echo $dictData['first_story_date'] ?></td>
+            </tr>
+            <tr>
+                <td>Your first ever close friends story date</td>
+                <td><?php echo $dictData['first_close_friends_story_date'] ?></td>
+            </tr>
+            <tr>
+                <td>Your last posted story date</td>
+                <td><?php echo $dictData['last_story_date'] ?></td>
+            </tr>
+            <tr>
+                <td>Last login date</td>
+                <td><?php echo $dictData['last_login_date'] ?></td>
+            </tr>
+            <tr>
+                <td>Last logout date</td>
+                <td><?php echo $dictData['last_logout_date'] ?></td>
+            </tr>
+            <tr>
+                <th>Ads</th>
+            </tr>
+            <tr>
+                <td>Advertisers using your activity</td>
+                <td><?php echo $dictData['advertisers_using_your_activity_count'] ?></td>
             </tr>
             <tr>
                 <th>Persona</th>
@@ -138,14 +172,17 @@ if ($dictData['demo'] === 1) {
                 <script>
                     // Give necessary variables to canvas.
                     let name = <?php echo json_encode($dictData['name']) ?>;
+                    let post_likes_thisyear = <?php echo json_encode($dictData['post_likes_thisyear']) ?>;
+                    let comment_likes_thisyear = <?php echo json_encode($dictData['comment_likes_thisyear']) ?>;
+                    let story_interactions_likes_thisyear = <?php echo json_encode($dictData['story_interactions_likes_thisyear']) ?>;
+                    let story_interactions_quizzes_thisyear = <?php echo json_encode($dictData['story_interactions_quizzes_thisyear']) ?>;
+                    let saved_posts_thisyear = <?php echo json_encode($dictData['saved_posts_thisyear']) ?>;
+                    let posts_thisyear = <?php echo json_encode($dictData['posts_thisyear']) ?>;
+                    let stories_thisyear = <?php echo json_encode($dictData['stories_thisyear']) ?>;
+                    let follows_total_thisyear = <?php echo json_encode($dictData['follows_total_thisyear']) ?>;
                     let post_comments_alltime = <?php echo json_encode($dictData['post_comments_alltime']) ?>;
                     let reels_comments_alltime = <?php echo json_encode($dictData['reels_comments_alltime']) ?>;
-                    let first_ever_story_timestamp = <?php echo json_encode($dictData['first_ever_story_timestamp']) ?>;
-                    let story_interactions_likes_current = <?php echo json_encode($dictData['story_interactions_likes_current']) ?>;
-                    let post_likes_current = <?php echo json_encode($dictData['post_likes_current']) ?>;
-                    let comment_likes_current = <?php echo json_encode($dictData['comment_likes_current']) ?>;
-                    let saved_posts_thisyear = <?php echo json_encode($dictData['saved_posts_thisyear']) ?>;
-                    let suggested_accounts_viewed_alltime = <?php echo json_encode($dictData['suggested_accounts_viewed_alltime']) ?>;
+                    let advertisers_using_your_activity_count = <?php echo json_encode($dictData['advertisers_using_your_activity_count']) ?>;
                 </script>
             </canvas>
             <br>

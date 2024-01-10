@@ -110,7 +110,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.fillStyle = "black";
             context.font = "bold 48px Roboto";
             context.textAlign = "center";
-            context.fillText(`${name}\'s Instagram activity:`, canvas.width / 2, 950);
+            context.fillText(`${name}\'s Instagram Wrapped:`, canvas.width / 2, 950);
 
             // Underline for "STATS".
             context.strokeStyle = "black";
@@ -122,15 +122,15 @@ document.getElementById("shareButton").addEventListener("click", function () {
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`All-time comments on posts: ${post_comments_alltime}`, canvas.width / 2, 1050);
-            context.fillText(`All-time comments on reels: ${reels_comments_alltime}`, canvas.width / 2, 1125);
-            context.fillText(`First ever story date: ${first_ever_story_timestamp}`, canvas.width / 2, 1200);
-            context.fillText(`Stories liked this year: ${story_interactions_likes_current}`, canvas.width / 2, 1275);
-            context.fillText(`Posts liked this year: ${post_likes_current}`, canvas.width / 2, 1350);
-            context.fillText(`Comments liked this year: ${comment_likes_current}`, canvas.width / 2, 1425);
-            context.fillText(`Posts saved this year: ${saved_posts_thisyear}`, canvas.width / 2, 1500);
-            context.fillText(`Instagram tricked you: ${suggested_accounts_viewed_alltime} times`, canvas.width / 2, 1575);
-            context.fillText(`------------------------------`, canvas.width / 2, 1650);
+            context.fillText(`Posts liked: ${post_likes_thisyear}`, canvas.width / 2, 1050);
+            context.fillText(`Comments liked: ${comment_likes_thisyear}`, canvas.width / 2, 1125);
+            context.fillText(`Stories liked: ${story_interactions_likes_thisyear}`, canvas.width / 2, 1200);
+            context.fillText(`Story quizzes solved: ${story_interactions_quizzes_thisyear}`, canvas.width / 2, 1275);
+            context.fillText(`Posts saved: ${saved_posts_thisyear}`, canvas.width / 2, 1350);
+            context.fillText(`Posts and stories posted: ${posts_thisyear + stories_thisyear}`, canvas.width / 2, 1425);
+            context.fillText(`New followers: ${follows_total_thisyear}`, canvas.width / 2, 1500);
+            context.fillText(`All-time comment count: ${post_comments_alltime + reels_comments_alltime}`, canvas.width / 2, 1575);
+            context.fillText(`Advertisers that spy on you: ${advertisers_using_your_activity_count}`, canvas.width / 2, 1650);
 
             // Footer
             context.fillStyle = "#000000";

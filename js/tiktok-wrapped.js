@@ -105,7 +105,7 @@ document.getElementById("shareButton").addEventListener("click", function () {
             context.fillStyle = "#00f2ea";
             context.font = "bold 48px Roboto";
             context.textAlign = "center";
-            context.fillText(`${name}\'s TikTok activity:`, canvas.width / 2, 950);
+            context.fillText(`${name}\'s TikTok Wrapped:`, canvas.width / 2, 950);
 
             // Underline for "STATS".
             context.strokeStyle = "#00f2ea";
@@ -117,9 +117,9 @@ document.getElementById("shareButton").addEventListener("click", function () {
 
             // List
             context.font = "48px Roboto";
-            context.fillText(`Total videos watched: ${num_videos_watched}`, canvas.width / 2, 1050);
-            context.fillText(`Total watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1125);
-            context.fillText(`Total number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1200);
+            context.fillText(`Videos watched: ${num_videos_watched}`, canvas.width / 2, 1050);
+            context.fillText(`Watch time: ${Math.round(total_watch_time / 60)} hours`, canvas.width / 2, 1125);
+            context.fillText(`Number of watch sessions: ${num_watch_sessions}`, canvas.width / 2, 1200);
             context.fillText(`Average session length: ${avg_session_length} min`, canvas.width / 2, 1275);
             context.fillText(`Longest watch session: ${longest_watch_time} min`, canvas.width / 2, 1350);
             context.fillText(`Most active weekday: ${tiktok_day}`, canvas.width / 2, 1425);
